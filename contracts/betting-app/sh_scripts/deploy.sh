@@ -6,13 +6,13 @@ echo "##### Deploy module under a new object #####"
 
 # Profile is the account you used to execute transaction
 # Run "aptos init" to create the profile, then get the profile name from .aptos/config.yaml
-PUBLISHER_PROFILE=testnet-profile-1
+PUBLISHER_PROFILE=mainnet-profile-1
 
 PUBLISHER_ADDR=0x$(aptos config show-profiles --profile=$PUBLISHER_PROFILE | grep 'account' | sed -n 's/.*"account": \"\(.*\)\".*/\1/p')
 
 OUTPUT=$(aptos move create-object-and-publish-package \
-  --address-name message_board_addr \
-  --named-addresses message_board_addr=$PUBLISHER_ADDR \
+  --address-name betting_app_addr \
+  --named-addresses betting_app_addr=$PUBLISHER_ADDR \
   --profile $PUBLISHER_PROFILE \
 	--assume-yes)
 

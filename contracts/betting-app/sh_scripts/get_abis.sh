@@ -1,10 +1,10 @@
 #! /bin/bash
 
-NETWORK=testnet
+NETWORK=mainnet
 
 CONTRACT_ADDRESS=$(cat ./contract_address.txt)
 
-MODULE_NAME=message_board
+MODULE_NAME=betting_app
 
 ABI="export const ABI = $(curl https://fullnode.$NETWORK.aptoslabs.com/v1/accounts/$CONTRACT_ADDRESS/module/$MODULE_NAME | sed -n 's/.*"abi":\({.*}\).*}$/\1/p') as const" 
 

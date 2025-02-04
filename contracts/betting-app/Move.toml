@@ -1,13 +1,17 @@
 [package]
-name = "message-board"
+name = "BetOnUsdcSupply"
 version = "1.0.0"
 authors = []
 
 [addresses]
-message_board_addr = "_"
+betting_app_addr = "_"
+apt_fa_addr = "0x000000000000000000000000000000000000000000000000000000000000000a"
+usdc_fa_addr = "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b"
 
 [dev-addresses]
-message_board_addr = "0x999"
+betting_app_addr = "0x999"
+apt_fa_addr = "0x000000000000000000000000000000000000000000000000000000000000000a"
+usdc_fa_addr = "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b"
 
 [dependencies]
 AptosFramework = { git = "https://github.com/aptos-labs/aptos-framework.git", rev = "mainnet", subdir = "aptos-framework" }
